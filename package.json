@@ -1,0 +1,28 @@
+{
+  "name": "ts-algorithms",
+  "version": "1.0.0",
+  "description": "javascript-algorithms 项目学习，顺带练习TS。",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers ts:ts-node/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JongeClub/ts-algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JongeClub/ts-algorithms/issues"
+  },
+  "homepage": "https://github.com/JongeClub/ts-algorithms#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  }
+}
