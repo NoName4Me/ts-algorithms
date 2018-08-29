@@ -1,12 +1,15 @@
 import { expect } from 'chai';
 import LinkedListNode from './LinkedListNode';
 
-describe('测试 math', function () {
+describe('测试链表节点', function () {
 
-  it('add()', function () {
-    let node = new LinkedListNode('hello')
+  it('创建', function () {
+    let node = new LinkedListNode('hello');
     expect(node.value).to.equal('hello');
-    console.log(node.toString())
+    node = new LinkedListNode(123);
+    expect(node.value).to.equal(123);
+    expect(node.toString()).to.equal('123');
+    // expect(node.value).to.equal(123);
   });
 
 });
