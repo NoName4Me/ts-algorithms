@@ -61,4 +61,11 @@ describe('链表', function () {
     expect(list.find(6)).to.equal(null);
   });
 
+  it('数组创建/导出', function () {
+    let arr: number[] = [1, 5, 3];
+    let list = new LinkedList();
+    list.fromArray(arr);
+    expect(list.toString()).to.equal('153');
+    expect(list.toArray().map(item => item.value)).deep.equal([1, 5, 3]); // or `.members()`
+  });
 });

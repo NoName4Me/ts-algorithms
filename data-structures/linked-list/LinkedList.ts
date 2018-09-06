@@ -124,8 +124,26 @@ export default class LinkedList {
       }
     }
     this.tail = currentNode;
-    
+
     return removedNode;
+  }
+
+  toArray(): LinkedListNode[] {
+    const nodes: LinkedListNode[] = [];
+    let currentNode = this.head;
+
+    while (currentNode) {
+      nodes.push(currentNode);
+      currentNode = currentNode.next;
+    }
+    return nodes;
+  }
+
+  fromArray(values: any[]): LinkedList {
+    values.forEach(item => {
+      this.addTail(item);
+    })
+    return this;
   }
 
   toString(callback?: any): String {
