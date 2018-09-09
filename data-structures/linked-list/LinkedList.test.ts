@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import LinkedListNode from './LinkedListNode';
 import LinkedList from './LinkedList';
 
 describe('链表', function () {
