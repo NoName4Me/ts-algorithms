@@ -62,7 +62,7 @@ export default class Heap {
     return this.heapContainer[0];
   }
 
-  poll():any {
+  poll(): any {
     if (this.heapContainer.length === 0) {
       return null;
     }
@@ -77,13 +77,13 @@ export default class Heap {
     return item;
   }
 
-  add(item:any): Heap {
+  add(item: any): Heap {
     this.heapContainer.push(item);
     this.heapifyUp();
     return this;
   }
 
-  remove(item:any, comparator = this.compare): Heap {
+  remove(item: any, comparator = this.compare): Heap {
     const numberOfItemsToRemove = this.find(item, comparator).length;
 
     for (let i = 0; i < numberOfItemsToRemove; i++) {
@@ -106,7 +106,7 @@ export default class Heap {
     return this;
   }
 
-  find(item:any, comparator:Comparator = this.compare): number[] {
+  find(item: any, comparator: Comparator = this.compare): number[] {
     const foundItemIndices = [];
     for (let i = 0; i < this.heapContainer.length; i++) {
       if (comparator.equal(item, this.heapContainer[i])) {

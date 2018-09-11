@@ -1,7 +1,7 @@
 export default class Comparator {
   compare: any;
 
-  constructor(compareFunction?: object) {
+  constructor(compareFunction?: Function) {
     this.compare = compareFunction || Comparator.defaultCompareFunction;
   }
 
