@@ -5,7 +5,7 @@ export default class QuickSort<T> extends Sort<T> {
     super(callbacks);
   }
 
-  sort<T>(originalArray:T[]):T[] {
+  sort(originalArray:T[]):T[] {
     const arr:T[] = [...originalArray];
     if (arr.length < 2) {
       return arr;

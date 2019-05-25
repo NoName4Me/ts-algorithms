@@ -9,12 +9,8 @@ export default class InsertionSort<T> extends Sort<T>{
     for (let i = 1; i < originalArray.length; i++) {
       const value: T = originalArray[i];
       let j = i - 1;
-      for (; j >= 0; j--) {
-        if (this.comparator.lessThan(value, originalArray[j])) {
-          originalArray[j + 1] = originalArray[j];
-        } else {
-          break;
-        }
+      for (; j >= 0 && this.comparator.lessThan(value, originalArray[j]); j--) {
+        originalArray[j + 1] = originalArray[j];
       }
       originalArray[j + 1] = value;
     }
