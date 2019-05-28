@@ -146,7 +146,7 @@ export default class LinkedList<T> {
     return this;
   }
 
-  toString(callback?: Function): String {
-    return this.toArray().map(node => node.toString(callback)).toString();
+  toString(callback?: Function): string {
+    return this.toArray().map(node => node.toString(callback)).join('');
   }
 }
